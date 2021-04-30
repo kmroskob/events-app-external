@@ -33,17 +33,44 @@
   </div>
 </nav>
   <div>
-      <h1>Welcome to the Cloud Chaser's application</h1>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+            <span class="navbar-brand mb-0 h1"><h1>Welcome to the Cloud Chaser's application</h1></span>
+        </div>
+    </nav>
+      
     {{{body}}}
 </div>
 <div>
-  <h2>Add an event</h2>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Add New Event
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New Event</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      <h2>Add an event</h2>
     <form action="/event" method="post">
        title: <input name="title" type="text" /> <br />
        description: <input name="description" type="text" /> <br />
        <br />
-        <input type="submit" name="submit" value="submit" />
+        
     </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <input type="submit" class="btn btn-primary" name="submit" value="Submit" />
+      </div>
+    </div>
   </div>
+</div>
+  
 </body>
 </html>
